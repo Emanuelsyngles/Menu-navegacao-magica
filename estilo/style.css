@@ -65,17 +65,39 @@ body {
     transform: translateY(20px);
 }
 
-.navegacao > ul > li:hover > a .icone {
+.navegacao > ul > li.ativo > a .icone {
     transform: translateY(-25px);
     transition: .3s;
     color: rgb(29, 234, 73);
 }
 
-.navegacao > ul > li:hover > a .texto {
+.navegacao > ul > li.ativo > a .texto {
     opacity: 2;
     transition: .5s;
     transform: translateY(10px);
 } 
+
+.navegacao > ul > li:nth-child(1).ativo ~ .indicador {
+    transform: translateX(calc(70px * 0));
+    transition: .5s;
+}
+.navegacao > ul > li:nth-child(2).ativo ~ .indicador {
+    transform: translateX(calc(70px * 1));
+    transition: .5s;
+}
+.navegacao > ul > li:nth-child(3).ativo ~ .indicador {
+    transform: translateX(calc(70px * 2));
+    transition: .5s;
+}
+.navegacao > ul > li:nth-child(4).ativo ~ .indicador {
+    transform: translateX(calc(70px * 3));
+    transition: .5s;
+}
+.navegacao > ul > li:nth-child(5).ativo ~ .indicador {
+    transform: translateX(calc(70px * 4));
+    transition: .5s;
+}
+
 
 /*div cega*/
 
@@ -84,6 +106,8 @@ body {
     height: 70px;
     background-color: darkblue;
     border-radius: 50%;
+    border: 2px solid rgb(0, 242, 255);
     position: absolute;
     top: -50%;
 }
+
