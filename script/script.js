@@ -1,0 +1,1 @@
+const listas = document.querySelectorAll('.lista')
